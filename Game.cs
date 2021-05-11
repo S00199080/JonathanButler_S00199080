@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,13 @@ namespace JonathanButler_S00199080
 
             Price = price - discount;
             return Price;
+        }
+
+        public class GameData : DbContext
+        {
+            public GameData() : base("GameData") { }
+
+            public DbSet<Game> Games { get; set; }
         }
 
     }
