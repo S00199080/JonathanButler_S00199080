@@ -20,9 +20,15 @@ namespace JonathanButler_S00199080
     /// </summary>
     public partial class MainWindow : Window
     {
+        DatabaseInfo db = new DatabaseInfo();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
